@@ -15,6 +15,7 @@ RUN sudo apt-get -qq install --assume-yes git curl
 RUN curl https://raw.githubusercontent.com/TaylorMonacelli/emacs-in-containers/wip/init.sh | sh -
 RUN curl https://raw.githubusercontent.com/TaylorMonacelli/emacs-in-containers/wip/stow.sh | sh -
 RUN curl https://raw.githubusercontent.com/TaylorMonacelli/emacs-in-containers/wip/emacs.sh | sh -
+RUN curl https://raw.githubusercontent.com/TaylorMonacelli/emacs-in-containers/wip/dotfiles.sh | sh -
 
 ##############################
 # Enable sshd
