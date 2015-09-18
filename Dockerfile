@@ -4,15 +4,17 @@
 # sure you lock down to a specific version, not to `latest`!
 # See https://github.com/phusion/baseimage-docker/blob/master/Changelog.md for
 # a list of version numbers.
-FROM phusion/baseimage:0.9.16
+FROM phusion/baseimage:0.9.17
 
 # Use baseimage-docker's init system.
 CMD ["/sbin/my_init"]
 
 # ...put your own build instructions here...
 RUN sudo apt-get -qq update
-RUN sudo apt-get -qq install --assume-yes git curl emacs
-RUN curl https://raw.githubusercontent.com/TaylorMonacelli/ubuntu_taylor/master/setup.sh | sh -
+RUN sudo apt-get -qq install --assume-yes git curl
+RUN curl -O https://raw.githubusercontent.com/TaylorMonacelli/emacs-in-containers/wip/init.sh | sh -
+RUN curl -O https://raw.githubusercontent.com/TaylorMonacelli/emacs-in-containers/wip/stow.sh | sh -
+RUN curl -O https://raw.githubusercontent.com/TaylorMonacelli/emacs-in-containers/wip/emacs.sh | sh -
 
 ##############################
 # Enable sshd
