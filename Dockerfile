@@ -11,7 +11,7 @@ CMD ["/sbin/my_init"]
 
 # ...put your own build instructions here...
 RUN sudo apt-get -qq update
-RUN sudo apt-get -qq install --assume-yes git curl
+RUN sudo apt-get -qq install --assume-yes git curl tmux mosh
 RUN curl https://raw.githubusercontent.com/TaylorMonacelli/emacs-in-containers/wip/init.sh | sh -
 RUN curl https://raw.githubusercontent.com/TaylorMonacelli/emacs-in-containers/wip/stow.sh | sh -
 RUN curl https://raw.githubusercontent.com/TaylorMonacelli/emacs-in-containers/wip/emacs.sh | sh -
