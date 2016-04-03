@@ -4,7 +4,7 @@
 # sure you lock down to a specific version, not to `latest`!
 # See https://github.com/phusion/baseimage-docker/blob/master/Changelog.md for
 # a list of version numbers.
-FROM phusion/baseimage:0.9.17
+FROM taylorm/stow:latest
 
 # Use baseimage-docker's init system.
 CMD ["/sbin/my_init"]
@@ -13,7 +13,6 @@ CMD ["/sbin/my_init"]
 RUN sudo apt-get -qq update
 RUN sudo apt-get -qq install --assume-yes git curl tmux mosh
 RUN curl https://raw.githubusercontent.com/TaylorMonacelli/emacs-in-containers/wip/init.sh | sh -
-RUN curl https://raw.githubusercontent.com/TaylorMonacelli/emacs-in-containers/wip/stow.sh | sh -
 RUN curl https://raw.githubusercontent.com/TaylorMonacelli/emacs-in-containers/wip/emacs.sh | sh -
 RUN curl https://raw.githubusercontent.com/TaylorMonacelli/emacs-in-containers/wip/dotfiles.sh | sh -
 
